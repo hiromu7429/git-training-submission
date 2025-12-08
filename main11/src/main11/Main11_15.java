@@ -1,0 +1,27 @@
+package main11;
+
+//インターフェースを継承したクラスの定義
+public class Main11_15 implements Main11_14 {
+
+	String ownerNmae;
+	String address;
+	String phone;
+
+	//シャツを洗う
+	public Shirt washShirt(Shirt s) {
+		//大型洗濯機15分
+		return s;
+	}
+
+	//タオルを洗う
+	public Towl washtowl(Towl t) {
+		//大型洗濯機10分
+		return t;
+	}
+
+	//コートを洗う
+	public Coat washCoat(Coat c) {
+		//ドライ20分
+		return c;
+	}
+}
