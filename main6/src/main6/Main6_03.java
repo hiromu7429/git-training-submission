@@ -1,6 +1,6 @@
 package main6;
 
-//mainメソッドだけが残されたCalc.java（Main6_01.java)
+//mainメソッドだけが残されたCalc.java
 public class Main6_03 {
 	public static void main(String[] args) {
 		int a = 10;

@@ -1,7 +1,7 @@
-package main6;
+package calcapp.logics;
 
-//CalcLogic.java(Main6_02.java)に計算処理を追加する
-public class Main6_02 {
+//CalcLogic.javaに計算処理を追加する
+public class CalcLogic {
 	public static int tasu(int a, int b) {
 		return (a + b);
 	}
