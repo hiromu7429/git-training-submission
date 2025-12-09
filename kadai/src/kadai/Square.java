@@ -12,7 +12,7 @@ public class Square extends Rectangle {
 	 *第4引数...正方形の一辺の長さ
 	 * @param x
 	 * @param y
-	 * @param width
+	 * @param width(幅=高さ)
 	 */
 	public Square(int x, int y, int width) {
 		super(x, y, width, width);
