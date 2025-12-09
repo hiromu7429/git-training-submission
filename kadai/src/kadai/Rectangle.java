@@ -24,7 +24,7 @@ public class Rectangle extends Polygon {
 		this.p = new Point(x, y);
 		this.width = width;
 		this.height = height;
-		this.angle = 4;
+		super.angle = 4;
 	}
 
 	/**
