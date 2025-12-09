@@ -21,7 +21,10 @@ public class Rectangle extends Polygon {
 	 * @param height
 	 */
 	public Rectangle(int x, int y, int width, int height) {
-
+		this.p = new Point(x, y);
+		this.width = width;
+		this.height = height;
+		this.angle = 4;
 	}
 
 	/**
@@ -30,7 +33,12 @@ public class Rectangle extends Polygon {
 	 *"[長方形(矩形)を描画] 点(0,0)を基準として幅100、高さ50の長方形"
 	 */
 	public void draw() {
-
+		int x = 0;
+		x = this.p.getX();
+		int y = 0;
+		y = this.p.getY();
+		System.out.println(
+				"[長方形(矩形)を描画]点" + (x + "," + y) + "を基準として幅" + this.width + "、高さ " + this.height + "の長方形");
 	}
 
 	/**
@@ -38,7 +46,7 @@ public class Rectangle extends Polygon {
 	 *( width + height ) * 2
 	 */
 	public double getPerimeter() {
-
+		return (this.width + this.height) * 2;
 	}
 
 }

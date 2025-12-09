@@ -4,5 +4,8 @@ package kadai;
 //・図形描画機能
 //・長さ測定機能
 public abstract class Shape implements Figure {
+	public abstract void draw();
+
+	public abstract double getPerimeter();
 
 }

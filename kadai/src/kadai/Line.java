@@ -14,20 +14,21 @@ public class Line implements Figure {
 	 *p1(x,y座標)、p2(x,y座標)全て0で初期化する。
 	 */
 	public Line() {
-		Point p1 = new Point();
-		Point p2 = new Point();
+		this.p1 = new Point(0, 0);
+		this.p2 = new Point(0, 0);
 	}
 
 	/**
 	 *引数で受け取ったデータを用いて、2つのPointオブジェクトを生成。
 	 *p1フィールドとp2フィールドにそれぞれを代入する。
-	 * @param x1
-	 * @param y1
-	 * @param x2
-	 * @param y2
+	 * @param x1 始点p1のX座標の値
+	 * @param y1 始点p1のY座標の値
+	 * @param x2 始点p2のX座標の値
+	 * @param y2 始点p2のY座標の値
 	 */
 	public Line(int x1, int y1, int x2, int y2) {
-
+		this.p1 = new Point(x1, y1);
+		this.p2 = new Point(x2, y2);
 	}
 
 	/**
@@ -36,7 +37,7 @@ public class Line implements Figure {
 	 *"[線を描画] 始点(0,0)から終点(100,100)まで"
 	 */
 	public void draw() {
-
+		System.out.println("[線を描画]" + this.p1 + "から" + this.p2 + "まで");
 	}
 
 	/**
@@ -46,6 +47,6 @@ public class Line implements Figure {
 	 * 
 	 */
 	public double getPerimeter() {
-
+		return Math.sqrt(Math.pow(p2.getX() - p1.getX(), 2) + (Math.pow(p2.getY() - p2.getY(), 2)));
 	}
 }

@@ -14,18 +14,21 @@ public class Circle extends Shape {
 	 *center(x,y座標)、半径全て0で初期化する
 	 */
 	public Circle() {
+		this.center = new Point(0, 0);
+		this.radius = 0;
 
 	}
 
 	/**
 	 *引数x,yで受け取ったデータを用いて、1つのPointオブジェクトを生成し、centerフィールドに代入する。
 	 *引数rもradiusフィールドに代入する。
-	 * @param x
-	 * @param y
-	 * @param r
+	 * @param x X座標の値
+	 * @param y Y座標の値
+	 * @param r 半径の値
 	 */
 	public Circle(int x, int y, int r) {
-
+		this.center = new Point(x, y);
+		this.radius = r;
 	}
 
 	/**
@@ -34,7 +37,11 @@ public class Circle extends Shape {
 	 *"[円を描画] 中心点(100,100)から半径20"
 	 */
 	public void draw() {
-
+		int x = 0;
+		x = this.center.getX();
+		int y = 0;
+		y = this.center.getY();
+		System.out.println("[円を描画]中心点" + (x + "," + y) + "から半径" + this.radius);
 	}
 
 	/**
@@ -44,7 +51,7 @@ public class Circle extends Shape {
 	 *円周率...Math.PIフィールド
 	 */
 	public double getPerimeter() {
-
+		return (radius * 2 * Math.PI);
 	}
 
 }

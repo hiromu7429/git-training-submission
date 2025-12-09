@@ -12,8 +12,8 @@ public class Point {
 	 *・引数なしコンストラクタの定義x座標、y座標ともに0で初期化する。
 	 */
 	public Point() {
-		x = 0;
-		y = 0;
+		this.x = 0;
+		this.y = 0;
 	}
 
 	/**
