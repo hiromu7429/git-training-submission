@@ -38,7 +38,7 @@ public class Rectangle extends Polygon {
 		int y = 0;
 		y = this.p.getY();
 		System.out.println(
-				"[長方形(矩形)を描画]点" + (x + "," + y) + "を基準として幅" + this.width + "、高さ " + this.height + "の長方形");
+				"[長方形(矩形)を描画]点(" + (x + "," + y) + ")を基準として幅" + this.width + "、高さ " + this.height + "の長方形");
 	}
 
 	/**

@@ -29,7 +29,7 @@ public class Square extends Rectangle {
 		int y = 0;
 		y = this.p.getY();
 		System.out.println(
-				"[正方形を描画]点" + (x + "," + y) + "を基準として幅・高さ" + this.width + "の正方形");
+				"[正方形を描画]点(" + (x + "," + y) + ")を基準として幅・高さ" + this.width + "の正方形");
 
 	}
 
