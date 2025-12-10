@@ -35,18 +35,12 @@ public class Triangle extends Polygon {
 	 * "[三角形を描画] 点1(0,0)から点2(100,100)、点3(0, 200)の三角形"
 	 */
 	public void draw() {
-		int x1 = 0;
-		x1 = this.p1.getX();
-		int y1 = 0;
-		y1 = this.p1.getY();
-		int x2 = 0;
-		x2 = this.p2.getX();
-		int y2 = 0;
-		y2 = this.p2.getY();
-		int x3 = 0;
-		x3 = this.p3.getX();
-		int y3 = 0;
-		y3 = this.p3.getY();
+		int x1 = this.p1.getX();
+		int y1 = this.p1.getY();
+		int x2 = this.p2.getX();
+		int y2 = this.p2.getY();
+		int x3 = this.p3.getX();
+		int y3 = this.p3.getY();
 		System.out.println(
 				"[三角形を描画]点1(" + (x1 + "," + y1) + ")から点2(" + (x2 + "," + y2) + ")、点3(" + (x3 + "," + y3) + ")の三角形");
 	}

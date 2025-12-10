@@ -24,10 +24,8 @@ public class Square extends Rectangle {
 	 *[正方形を描画] 点(0,0)を基準として幅・高さ200の正方形"
 	 */
 	public void draw() {
-		int x = 0;
-		x = this.p.getX();
-		int y = 0;
-		y = this.p.getY();
+		int x = this.p.getX();
+		int y = this.p.getY();
 		System.out.println(
 				"[正方形を描画]点(" + (x + "," + y) + ")を基準として幅・高さ" + this.width + "の正方形");
 

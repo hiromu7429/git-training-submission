@@ -37,14 +37,10 @@ public class Line implements Figure {
 	 *"[線を描画] 始点(0,0)から終点(100,100)まで"
 	 */
 	public void draw() {
-		int x1 = 0;
-		x1 = this.p1.getX();
-		int y1 = 0;
-		y1 = this.p1.getY();
-		int x2 = 0;
-		x2 = this.p2.getX();
-		int y2 = 0;
-		y2 = this.p2.getY();
+		int x1 = this.p1.getX();
+		int y1 = this.p1.getY();
+		int x2 = this.p2.getX();
+		int y2 = this.p2.getY();
 		System.out.println("[線を描画]始点(" + (x1 + "," + y1) + ")から終点(" + (x2 + "," + y2) + ")まで");
 	}
 

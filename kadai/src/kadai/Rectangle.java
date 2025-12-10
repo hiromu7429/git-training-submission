@@ -33,10 +33,8 @@ public class Rectangle extends Polygon {
 	 *"[長方形(矩形)を描画] 点(0,0)を基準として幅100、高さ50の長方形"
 	 */
 	public void draw() {
-		int x = 0;
-		x = this.p.getX();
-		int y = 0;
-		y = this.p.getY();
+		int x = this.p.getX();
+		int y = this.p.getY();
 		System.out.println(
 				"[長方形(矩形)を描画]点(" + (x + "," + y) + ")を基準として幅" + this.width + "、高さ " + this.height + "の長方形");
 	}
