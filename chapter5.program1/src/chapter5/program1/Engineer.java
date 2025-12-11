@@ -19,7 +19,7 @@ public class Engineer extends Employee {
 	//情報表示・・・「{名前}：{所属部署}　使用言語：{使用言語}」と出力
 	public void displayInfo() {
 		String name = this.getName();
-		String section = this.getName();
+		String section = this.getSection();
 
 		System.out.println("「{" + name + "}:{" + section + "}　使用言語:{" + this.language + "}」");
 	}

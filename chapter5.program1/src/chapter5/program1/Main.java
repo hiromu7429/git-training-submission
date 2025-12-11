@@ -10,5 +10,12 @@ public class Main {
 
 		bt.displayEmployeeInfo();
 
+		
+		
+		Sales s1 = new Sales("すずき", "営業");
+		s1.displayInfo();
+		
+		HumanResource h1 = new HumanResource("すずき", "人事");
+		h1.displayInfo();
 	}
 }

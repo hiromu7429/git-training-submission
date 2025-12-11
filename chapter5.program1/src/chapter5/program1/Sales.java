@@ -26,7 +26,7 @@ public class Sales extends Employee {
 	//情報表示・・・「{名前}：{所属部署}」を出力する
 	public void displayInfo() {
 		String name = this.getName();
-		String section = this.getName();
+		String section = this.getSection();
 
 		System.out.println("「{" + name + "}:{" + section + "}」");
 	}
