@@ -4,6 +4,7 @@ package chapter5.program1;
 public class HumanResource extends Employee {
 
 	public HumanResource(String name, String section) {
+	
 		super(name, "人事");
 
 	}
@@ -12,10 +13,11 @@ public class HumanResource extends Employee {
 	public void interviewEmployee(Employee emp,boolean interview) {
 		if (interview == true) {
 			System.out.println("面接を行い、結果は採用だった");
+			BT bt1 = new BT();
 			//採用の場合の処理は後で考える（処理の記述が未完了）
 			//BTクラスのリストへ追加するメソッドを呼び出して追加する
 			//BTクラスのインスタンスがこのクラスにない、受け取り方
-			bt.addEmployee(emp);
+			bt1.addEmployee(emp);
 		} else {
 			System.out.println("面接を行い、結果は不採用だった");
 		}

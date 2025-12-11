@@ -44,6 +44,9 @@ public class BT {
 			}
 		}
 	}
+	public List<String> getSections() {
+		return this.sections;
+	}
 }
 
 /*
