@@ -33,10 +33,9 @@ public class BT {
 	}
 
 	public void createEmployee(String name, String section) {
-		Employee emp;
-		if (emp.section instanceof Engineer eng) {
-			//instanceofの使い方を調べる
-			//作成した従業員の所属部署がエンジニアなら使用言語も表示するようにしたい
+		Employee emp = null;
+		if (emp instanceof Engineer eng) {
+			//あとで消す？要確認
 		}
 	}
 
@@ -45,7 +44,10 @@ public class BT {
 		Iterator<Employee> it = employees.iterator();
 		while (it.hasNext()) {
 			Employee e = it.next();
-			System.out.println(e);
+			System.out.println(e.getName() + "/" + e.getSection());
+			if (e instanceof Engineer eng) {
+				System.out.println("/" + eng.getLanguage());
+			}
 		}
 	}
 }

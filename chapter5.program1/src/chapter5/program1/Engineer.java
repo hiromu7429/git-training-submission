@@ -23,4 +23,13 @@ public class Engineer extends Employee {
 
 		System.out.println("「{" + name + "}:{" + section + "}　使用言語:{" + this.language + "}」");
 	}
+
+	public String getLanguage() {
+		return this.language;
+	}
+
+	public void setName(String language) {
+		this.language = language;
+	}
+
 }
