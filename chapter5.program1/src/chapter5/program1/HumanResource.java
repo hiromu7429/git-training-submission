@@ -15,6 +15,7 @@ public class HumanResource extends Employee {
 			//採用の場合の処理は後で考える（処理の記述が未完了）
 			//BTクラスのリストへ追加するメソッドを呼び出して追加する
 			//BTクラスのインスタンスがこのクラスにない、受け取り方
+			bt.addEmployee(emp);
 		} else {
 			System.out.println("面接を行い、結果は不採用だった");
 		}
