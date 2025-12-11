@@ -6,7 +6,8 @@ public class Main {
 
 		bt.addEmployee(new Engineer("すずき", "エンジニア ", "Java"));
 		bt.addEmployee(new Engineer("たなか", "エンジニア ", "Java"));
-		bt.addEmployee(new Sales("すずき", "人事"));
+		bt.addEmployee(new Sales("たんじろう", "営業"));
+		bt.addEmployee(new HumanResource("すずき", "人事"));
 
 		bt.displayEmployeeInfo();
 
