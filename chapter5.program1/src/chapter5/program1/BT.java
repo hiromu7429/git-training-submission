@@ -27,16 +27,9 @@ public class BT {
 		sections.add("エンジニア");
 	}
 
-	//従業員をリストに追加
+	//従業員をリストに追加（従業員を作成）　人事クラスのみアクセス可能にする必要あり（パッケージ分ける？）
 	public void addEmployee(Employee emp) {
 		employees.add(emp);
-	}
-
-	public void createEmployee(String name, String section) {
-		Employee emp = null;
-		if (emp instanceof Engineer eng) {
-			//あとで消す？要確認
-		}
 	}
 
 	//従業員のリストをイテレータで呼び出して表示
@@ -53,7 +46,7 @@ public class BT {
 }
 
 /*
-createEmployee従業員作成
+addEmployee従業員作成
 displayEmployeeInfo従業員情報表示
 displayInfo情報表示
 interviewEmployee社員面接
