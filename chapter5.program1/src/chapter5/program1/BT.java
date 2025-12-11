@@ -38,6 +38,7 @@ public class BT {
 		while (it.hasNext()) {
 			Employee e = it.next();
 			System.out.println(e.getName() + "/" + e.getSection());
+			//エンジニアだった場合の処理を追加
 			if (e instanceof Engineer eng) {
 				System.out.println("/" + eng.getLanguage());
 			}

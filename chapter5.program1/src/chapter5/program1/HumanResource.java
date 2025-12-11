@@ -9,7 +9,7 @@ public class HumanResource extends Employee {
 	}
 
 	//社員面接
-	public void interviewEmployee(boolean interview) {
+	public void interviewEmployee(Employee emp,boolean interview) {
 		if (interview == true) {
 			System.out.println("面接を行い、結果は採用だった");
 			//採用の場合の処理は後で考える（処理の記述が未完了）
