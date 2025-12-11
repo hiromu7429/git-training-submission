@@ -4,7 +4,7 @@ package chapter5.program1;
 public class Sales extends Employee {
 
 	public Sales(String name, String section) {
-		super(name, section);
+		super(name, "営業");
 
 	}
 

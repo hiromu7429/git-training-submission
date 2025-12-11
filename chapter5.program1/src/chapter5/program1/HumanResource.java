@@ -4,7 +4,7 @@ package chapter5.program1;
 public class HumanResource extends Employee {
 
 	public HumanResource(String name, String section) {
-		super(name, section);
+		super(name, "人事");
 
 	}
 
