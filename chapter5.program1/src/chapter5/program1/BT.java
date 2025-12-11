@@ -1,0 +1,63 @@
+package chapter5.program1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+//BT/DE
+public class BT {
+
+	//会社名
+	private String name;
+
+	//従業員リスト
+	private List<Employee> employees;
+
+	//部署リスト
+	private List<String> sections;
+
+	public BT() {
+		this.name = "BT";
+		employees = new ArrayList<>();
+		sections = new ArrayList<>();
+
+		//今回は増えることがないのでコンストラクタ内に追加
+		sections.add("人事");
+		sections.add("営業");
+		sections.add("エンジニア");
+	}
+
+	//従業員をリストに追加
+	public void addEmployee(Employee emp) {
+		employees.add(emp);
+	}
+
+	public void createEmployee(String name, String section) {
+		Employee emp;
+		if (emp.section instanceof Engineer eng) {
+			//instanceofの使い方を調べる
+			//作成した従業員の所属部署がエンジニアなら使用言語も表示するようにしたい
+		}
+	}
+
+	//従業員のリストをイテレータで呼び出して表示
+	public void displayEmployeeInfo() {
+		Iterator<Employee> it = employees.iterator();
+		while (it.hasNext()) {
+			Employee e = it.next();
+			System.out.println(e);
+		}
+	}
+}
+
+/*
+createEmployee従業員作成
+displayEmployeeInfo従業員情報表示
+displayInfo情報表示
+interviewEmployee社員面接
+calculateSalary給与計算
+replyWeeklyReport週報返信
+scheduleMeeting面談を組む
+haveMeeting打合せ
+startDevelopment開発実施
+*/
