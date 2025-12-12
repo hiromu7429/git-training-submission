@@ -23,7 +23,7 @@ public class HumanResource extends Employee {
 
 	//給与計算
 	public void calculateSalary() {
-		//このメソッドは一旦このまま
+		//ここに給与計算の実行処理
 	}
 
 	//情報表示・・・「{名前}：{所属部署}」を出力する
