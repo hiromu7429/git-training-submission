@@ -6,7 +6,7 @@ public class Engineer extends Employee {
 	//使用言語・・・使用している言語（java, pythonなど）
 	private String language;
 
-	public Engineer(String name, String language, BT bt) {
+	public Engineer(String name, String language, BT bt) {//リストにアクセスするために、コンストラクタでBTクラスを呼び出す
 		super(name, bt.getSections().get(2));
 		this.language = language;
 	}

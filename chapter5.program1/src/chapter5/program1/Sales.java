@@ -3,7 +3,7 @@ package chapter5.program1;
 //営業
 public class Sales extends Employee {
 
-	public Sales(String name, BT bt) {
+	public Sales(String name, BT bt) {//リストにアクセスするために、コンストラクタでBTクラスを呼び出す
 		super(name, bt.getSections().get(1));
 
 	}
