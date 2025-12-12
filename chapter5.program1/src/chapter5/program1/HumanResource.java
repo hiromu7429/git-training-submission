@@ -2,24 +2,22 @@ package chapter5.program1;
 
 //人事
 public class HumanResource extends Employee {
+	private BT bt;//人事は面接後に採用する（リストに追加する）BTクラスを保持する必要あり
 
-	public HumanResource(String name, String section) {
-	
-		super(name, "人事");
+	public HumanResource(String name, BT bt) {
 
+		super(name, bt.getSections().get(0));
+		this.bt = bt;
 	}
 
 	//社員面接
-	public void interviewEmployee(Employee emp,boolean interview) {
-		if (interview == true) {
-			System.out.println("面接を行い、結果は採用だった");
-			BT bt1 = new BT();
-			//採用の場合の処理は後で考える（処理の記述が未完了）
-			//BTクラスのリストへ追加するメソッドを呼び出して追加する
-			//BTクラスのインスタンスがこのクラスにない、受け取り方
-			bt1.addEmployee(emp);
+	public void interviewEmployee(Employee emp, boolean pass) {
+		if (pass == true) {
+			System.out.println(emp.getName() + "の面接を行い、結果は採用だった");
+
+			bt.addEmployee(emp);
 		} else {
-			System.out.println("面接を行い、結果は不採用だった");
+			System.out.println(emp.getName() + "の面接を行い、結果は不採用だった");
 		}
 	}
 

@@ -6,8 +6,8 @@ public class Engineer extends Employee {
 	//使用言語・・・使用している言語（java, pythonなど）
 	private String language;
 
-	public Engineer(String name, String section, String language) {
-		super(name, "エンジニア");
+	public Engineer(String name, String language, BT bt) {
+		super(name, bt.getSections().get(2));
 		this.language = language;
 	}
 

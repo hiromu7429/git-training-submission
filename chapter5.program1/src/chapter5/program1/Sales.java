@@ -3,8 +3,8 @@ package chapter5.program1;
 //営業
 public class Sales extends Employee {
 
-	public Sales(String name, String section) {
-		super(name, "営業");
+	public Sales(String name, BT bt) {
+		super(name, bt.getSections().get(1));
 
 	}
 
@@ -14,7 +14,7 @@ public class Sales extends Employee {
 	}
 
 	//面談組む（引数：エンジニア）・・・「{エンジニア.名前}の面談を組んだ」と出力
-	public void scheduelMetting(Engineer eng) {
+	public void scheduleMetting(Engineer eng) {
 		System.out.println("「{" + eng.getName() + "}の面談を組んだ」");
 	}
 

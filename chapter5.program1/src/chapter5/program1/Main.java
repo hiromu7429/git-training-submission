@@ -4,26 +4,29 @@ public class Main {
 	public static void main(String[] args) {
 		BT bt = new BT();
 
-		bt.addEmployee(new Engineer("すずき","","Java"));
-		bt.addEmployee(new Engineer("たなか", "エンジニア ", "Java"));
-		bt.addEmployee(new Sales("たんじろう", ""));
-		bt.addEmployee(new HumanResource("さかもと", ""));
-
-		bt.displayEmployeeInfo();
-
-		Sales s1 = new Sales("のび太", "営業");
+		Sales s1 = new Sales("のび太", bt);
+		bt.addEmployee(s1);
 		s1.replyWeeklyReport();
-		s1.scheduelMetting(new Engineer("しょうじ", "エンジニア ", "Java"));
+		s1.scheduleMetting(new Engineer("じゃいあん", "Java", bt));
 		s1.haveMeeting();
 		s1.displayInfo();
 
-		HumanResource h1 = new HumanResource("かるべ", "人事");
-		//h1.interviewEmployee();要確認 BTのリストへ追加するメソッドを呼び出す
-		//h1.calculateSalary();要確認　給与計算
+		HumanResource h1 = new HumanResource("ミサト", bt);
+		bt.addEmployee(h1);
+		HumanResource hEmp = new HumanResource("シンジ", bt);
+		h1.interviewEmployee(hEmp, true);
+		Sales sEmp = new Sales("レイ", bt);
+		h1.interviewEmployee(sEmp, false);
+		Engineer eEmp = new Engineer("アスカ", "Java", bt);
+		h1.interviewEmployee(eEmp, true);
+		h1.calculateSalary();
 		h1.displayInfo();
 
-		Engineer e1 = new Engineer("たかはし", "エンジニア", "Java");
+		Engineer e1 = new Engineer("さとし", "Java", bt);
+		bt.addEmployee(e1);
 		e1.startDevelopment();
 		e1.displayInfo();
+
+		bt.displayEmployeeInfo();
 	}
 }
