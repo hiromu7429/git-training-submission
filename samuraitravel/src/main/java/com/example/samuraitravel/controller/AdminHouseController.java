@@ -7,7 +7,9 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.samuraitravel.entity.House;
 import com.example.samuraitravel.repositry.HouseRepository;
@@ -26,19 +28,39 @@ public class AdminHouseController {
 		List<House> houses = houseRepository.findAll();
 		model.addAttribute("houses", houses);
 		return "admin/houses/index";
-	}*/
-
-	/*public String index(Model model, Pageable pageable) {
+	}
+	
+	public String index(Model model, Pageable pageable) {
 		List<House> houses = houseRepository.findAll();
 		Page<House> housePage = houseRepository.findAll(pageable);
 		model.addAttribute("houses", houses);
 		model.addAttribute("housePage", housePage);
 		return "admin/houses/index";
-	}*/
+	}
 	public String index(Model model,
 			@PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.ASC) Pageable pageable) {
 		Page<House> housePage = houseRepository.findAll(pageable);
 		model.addAttribute("housePage", housePage);
 		return "admin/houses/index";
+	}*/public String index(Model model,
+			@PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.ASC) Pageable pageable,
+			@RequestParam(name = "keyword", required = false) String keyword) {
+		Page<House> housePage;
+		if (keyword != null && !keyword.isEmpty()) {
+			housePage = houseRepository.findByNameLike("%" + keyword + "%", pageable);
+		} else {
+			housePage = houseRepository.findAll(pageable);
+		}
+		model.addAttribute("housePage", housePage);
+		model.addAttribute("keyword", keyword);
+		return "admin/houses/index";
 	}
+
+	@GetMapping("/{id}")
+	public String show(@PathVariable(name = "id") Integer id, Model model) {
+		House house = houseRepository.getReferenceById(id);
+		model.addAttribute("house", house);
+		return "admin/houses/show";
+	}
+
 }

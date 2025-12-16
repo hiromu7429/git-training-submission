@@ -24,7 +24,7 @@ public class House {
 	@Column(name = "image_name")
 	private String imageName;
 	@Column(name = "description")
-	private String descripiton;
+	private String description;
 	@Column(name = "price")
 	private Integer price;
 	@Column(name = "capacity")
