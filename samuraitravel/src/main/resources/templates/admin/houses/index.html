@@ -28,7 +28,7 @@
 		<main>
 			<div class="container pt-4 pb-5 samuraitravel-container">
 				<div class="row justify-content-center">
-					<div class="col-x1-9 col1-x1-10 col-lg-11">
+					<div class="col-x1-9 col-x1-10 col-lg-11">
 						<h1 class="mb-4 text-center">民宿一覧</h1>
 
 						<div class="d-flex justify-content-between align-items-end flex-wrap">
@@ -56,6 +56,7 @@
 									<th scope="col">住所</th>
 									<th scope="col">電話番号</th>
 									<th scope="col"></th>
+									<th scope="col"></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -69,7 +70,28 @@
 									<td><a href="#" class="samuraitravel-link-danger" data-bs-toggle="modal"
 											th:data-bs-target="${'#deleteHouseModal' + house.getId()}">削除</a></td>
 									<!-- 削除用モーダル -->
-									<div class="modal fade" th:id="${'deleteHouseModal' + house.getId()}" </tr>
+									<div class="modal fade" th:id="${'deleteHouseModal' + house.getId()}" tabindex="-1"
+										th:aria-labelledby="${'deleteHouseModalLabel' + house.getId()}">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title"
+														th:id="${'deleteHouseModalLabel' + house.getId()}"
+														th:text="${house.getName() + 'を削除してもよろしいですか？'}"></h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal"
+														aria-label="閉じる"></button>
+												</div>
+												<div class="modal-footer">
+													<form method="post"
+														th:action="@{/admin/houses/__${house.getId()}__/delete}">
+														<button type="submit"
+															class="btn samuraitravel-btn-danger text-white shadow-sm">削除</button>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</tr>
 							</tbody>
 						</table>
 						<div th:if="${housePage.getTotalPages()>1}" class="d-flex justify-content-center">
