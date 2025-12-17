@@ -28,7 +28,7 @@
 		<main>
 			<div class="container pt-4 pb-5 samuraitravel-container">
 				<div class="row justify-content-center">
-					<div class="col-xx1-9 col1-x1-10 col-lg-11">
+					<div class="col-x1-9 col1-x1-10 col-lg-11">
 						<h1 class="mb-4 text-center">民宿一覧</h1>
 
 						<div class="d-flex justify-content-between align-items-end flex-wrap">
@@ -40,7 +40,12 @@
 								</div>
 							</form>
 
-							<a href="#" class="btn text-white shadow-sm mb-e samuraitravel-btn">登録</a>
+
+							<a th:href="@{/admin/houses/register}"
+								class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
+						</div>
+						<div th:if="${successMessage}" class="alert alert-info">
+							<span th:text="${successMessage}"></span>
 						</div>
 						<table class="table">
 							<thead>
@@ -79,15 +84,13 @@
 											class="page-link active samuraitravel-active" th:text="${i + 1}"></span>
 										<a th:unless="${i == housePage.getNumber()}"
 											th:href="@{/admin/houses(page = ${i},keyword=${keyword})}"
-											class="page-link samuraitravel-page-link" th:text="${i + 1}">
-
-										</a>
+											class="page-link samuraitravel-page-link" th:text="${i + 1}"></a>
 
 									</li>
 									<li class="page-item">
 										<span th:if="${housePage.isLast()}" class="page-link disabled">次</span>
 										<a th:unless="${housePage.isLast()}"
-											th:href="@{/admin/houses(page=${housePage.getNumber()+1})}"
+											th:href="@{/admin/houses(page=${housePage.getNumber()+1},keyword=${keyword})}"
 											class="page-link samuraitravel-page-link">次</a>
 									</li>
 								</ul>
