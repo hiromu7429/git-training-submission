@@ -1,4 +1,4 @@
-package com.example.samuraitravel.repositry;
+package com.example.samuraitravel.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

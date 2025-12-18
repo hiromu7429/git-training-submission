@@ -19,7 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.samuraitravel.entity.House;
 import com.example.samuraitravel.form.HouseEditForm;
 import com.example.samuraitravel.form.HouseRegisterForm;
-import com.example.samuraitravel.repositry.HouseRepository;
+import com.example.samuraitravel.repository.HouseRepository;
 import com.example.samuraitravel.service.HouseService;
 
 @Controller
@@ -34,25 +34,7 @@ public class AdminHouseController {
 	}
 
 	@GetMapping
-	/*public String index(Model model) {
-		List<House> houses = houseRepository.findAll();
-		model.addAttribute("houses", houses);
-		return "admin/houses/index";
-	}
-	
-	public String index(Model model, Pageable pageable) {
-		List<House> houses = houseRepository.findAll();
-		Page<House> housePage = houseRepository.findAll(pageable);
-		model.addAttribute("houses", houses);
-		model.addAttribute("housePage", housePage);
-		return "admin/houses/index";
-	}
 	public String index(Model model,
-			@PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.ASC) Pageable pageable) {
-		Page<House> housePage = houseRepository.findAll(pageable);
-		model.addAttribute("housePage", housePage);
-		return "admin/houses/index";
-	}*/public String index(Model model,
 			@PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.ASC) Pageable pageable,
 			@RequestParam(name = "keyword", required = false) String keyword) {
 		Page<House> housePage;

@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.example.samuraitravel.entity.User;
-import com.example.samuraitravel.repositry.UserRepository;
+import com.example.samuraitravel.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

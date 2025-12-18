@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.samuraitravel.entity.House;
 import com.example.samuraitravel.form.HouseEditForm;
 import com.example.samuraitravel.form.HouseRegisterForm;
-import com.example.samuraitravel.repositry.HouseRepository;
+import com.example.samuraitravel.repository.HouseRepository;
 
 @Service
 public class HouseService {
