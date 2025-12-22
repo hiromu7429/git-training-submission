@@ -47,7 +47,7 @@ public class HouseController {
 				housePage = houseRepository.findByAddressLikeOrderByCreatedAtDesc("%" + area + "%", pageable);
 			}
 		} else if (price != null) {
-			if (order != null && order.equals("praiceAsc")) {
+			if (order != null && order.equals("priceAsc")) {
 				housePage = houseRepository.findByPriceLessThanEqualOrderByPriceAsc(price, pageable);
 			} else {
 				housePage = houseRepository.findByPriceLessThanEqualOrderByCreatedAtDesc(price, pageable);
