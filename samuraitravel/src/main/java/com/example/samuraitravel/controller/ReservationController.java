@@ -206,5 +206,4 @@ public class ReservationController {
 		model.addAttribute("reservationRegisterForm",reservationRegisterForm);
 		return "reservations/confirm";
 	}
->>>>>>> branch 'master' of https://github.com/hiromu7429/git-training-submission.git
 }
