@@ -54,6 +54,7 @@ public class StripeService {
 								.putMetadata("checkinDate", reservationRegisterForm.getCheckinDate())
 								.putMetadata("checkoutDate", reservationRegisterForm.getCheckoutDate())
 								.putMetadata("numberOfPeople", reservationRegisterForm.getNumberOfPeople().toString())
+								.putMetadata("amount", reservationRegisterForm.getAmount().toString())
 								.build())
 				.build();
 		try {
