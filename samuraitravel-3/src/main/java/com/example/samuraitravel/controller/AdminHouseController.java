@@ -1,5 +1,5 @@
 package com.example.samuraitravel.controller;
-//変更テスト
+//自宅PCで環境構築テスト
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
